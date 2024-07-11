@@ -1,0 +1,9 @@
+In order to setup the aws cli, we need to download it from the documentation for windows or Linux or macOS.
+1. After downloading it and setting it up with the gitpod from vs code, we initiate the gitpod by gp init and inorder to get it setup with a particular environment variable we check all the env variables taht are available.
+--- env | grep current-folder-name
+2. Now, in order to get working with your aws account setup from the terminal, we need to call in the command .
+---aws sts get-caller-identity.
+after this we need to give in the credentials to the gitpod terminal to get access to the aws .
+export AWS_ACCESS_KEY_ID=AKIAIOSFODNN7EXAMPLE
+export AWS_SECRET_ACCESS_KEY=wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY
+export AWS_DEFAULT_REGION=us-west-2, for setting uo the environment variables for above we need to setup a credential file.
