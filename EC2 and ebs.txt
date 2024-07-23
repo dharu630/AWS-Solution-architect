@@ -1,0 +1,70 @@
+the two concepts that are key to launching instanes
+1. the amout of virtual hardware dedicated to the instance--instance 
+2.software laoded on instance--AMI
+
+The instance types are varied based on following parameters:
+1. vcpus
+2. memory
+3. storage size and type
+4. network performance-- ENHANCED NETWORKING BY ENABLING THE SINGLE ROOT i/O virtualization.
+
+enhanced networking is only available for instances launched in the amazon virtual private cloud.
+ here the ratio pf vcpus: memory = constant
+
+INSTANCE TYPE FAMILIES:
+C4 = COMPUTE OPTIMIZED
+R3 = MEMORY OPTIMIZED
+I2 = STORAGE OPTIMIZED 
+G2 = GPU BASED INSTANCES
+
+AMAZON MACHINE IMAGES defines teh software for the instance:
+1. os and its config
+2.initial state of any patches
+3. application or system software
+
+Four sources of AMI:
+1. Published by AWS
+2. AWS MarketPlace
+3. Generated from existing instances
+4. uPloaded virtual servers
+
+Addressing an instance:1. Public DNS
+ 2. public Ip 3. Elastic Ip 4. additional methods like private ip address and elastic network addressing
+Amazon ec2 uses the public key cryptography.
+
+Virtual Firewall protection:
+AWS allows you to control traffic in and out of your instances , those firewalls are called security groups.
+EC2 -classic security group == controls only the outgoing traffic 
+VPC- controls bith the outgoing and incomiogn traffic, every instance should have atleast one security group.
+
+SECURITY GROUP RULES ATTRIBUTES:
+1. PORT
+2. PROTOCOL
+3. SOURCE/DESTIANTION
+
+LIFECYCLE OF INSTANCES
+1. LAUNCHING--BOOTSTRAPPING[USERDATA]
+2. VM-IMPORT/EXPORT
+ISNTANCES  LAUNCHED within aws from AMIS cannot be exported.
+
+3.Instance Metadata:
+associated  security groups, instance ID, instance Type, AMI used to launch the instance
+4. Managing instanes by tags
+5. Mpnitoring instances
+6. Modifying an instance-- instance type, security groups, for instances outside the amazon vpc like ec2 instances the security groups cannot be changed.
+
+TERMINATION PROTECTION;
+termination is protected from AWS calls, no prevention when triggered from OS, auto scaling groups.
+
+
+PRICING OPTIONS:
+1.on-demand instances 2. reservedinstances[ all upfront, partial upfront, no upfront] 3. Spot
+
+Tenancy options:
+1. sahred tenancy 2. dedicated insatnces 3. dedicated host
+
+Placememnt groups: logical grouping of instances to lower the latency.
+Instance stores: it provides temporary block level storage fro your isntance
+
+
+
