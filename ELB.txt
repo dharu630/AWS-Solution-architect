@@ -1,0 +1,24 @@
+ELASTIC LOAD BALANCING, AMAZON CLOUD WATCH AND AUTO-SCALING
+
+1. ELB allows you to distribute traffic acroos EC2 instances in more than one Availability zones in your applications.
+
+Types of load balancers:
+1. Internt facing load balancers--an aws recommends always to use load balancer by its DNS name instead by the IP address of the load balalncer.
+ELB in amamzon VPC supports IPV4 adddressesonly, ELB in ec2-classic supports both IPV4 and ipv6 addresses.
+2. Internal load balalncers--you can use internal load balalncers to route traffic to your amazon EC2 instances in VPC's with private subnets.
+3. HTTPS LOAD balalncers-- you can create a load balalncer that uses SSL/TLS protocol for encrypted connections --called as SSL offload. we can use SSL certificates or enable authentication on back-end instances , elb does not support server name indication , in order to access different servers with single SSL certificate, we use subject alternative name.
+
+LISTENERS:
+every load balalncers should have one or more listeners configure, a listener is  aprocess that checks for connection requests. every listenenr is configured with port and protocol for fron-end and back-end connections.
+
+Configuring elastic load balancing.:
+1. idle connection timeout
+2. crosszone loa balalncing
+3. connection draining
+4. Proxy protocol
+5. Sticky sessions
+
+AUTO SCALING COMPONENTS:
+1. Launch configuration
+2. Auto scaling group
+3. Optional scaling policy
