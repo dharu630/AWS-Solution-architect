@@ -1,0 +1,49 @@
+
+AWS IDENTITY AND ACCESS MANANGEMENT:
+PRINCIPALS:
+THREE TYPE OF PRINCIPALS:
+1. root users-- users are excellent way to enforce  principle of least privilege
+2. IAM users
+3. roles pr temporary security tokens--actors are authenticated by aws security token service (STS)--the range of a temporary token lifetime is 15 minutes to 36 hours.
+
+USE CASES FOR ROLES/TEMPORARY SECURITY TOKENS:
+1. AMAZON EC2 ROLES:
+2. CROSS-ACCOUNT ACCESS
+3. FEDERATION
+
+-- using iam roles for amazon ec2 removes the need for storing the credentials in a configuration file.
+
+--For federating web identities such as fb,insta,google iam supports integration via openId connect, this allows iam to grant privilegs to users authenticated with some of the major web-based idp's. for internal federation we support through security assertion markup language compliant idp.
+TRAITS:
+1. root user-- cannot be limited, permanent
+2. IAM users-- access controlled by policy, durable, can be removed by IAM administrator.
+3. roles/temporary security tokes-- acces controlled by policy temporary, expire after certain interval
+
+Authentication a principal:
+1. Username/password
+2. access key[ access key ID{20 charactders}+ access secret key{40 characters}]
+3. access key/session token
+
+Authorization:
+The process of specifying exactly what actions can and cannot perform is called authorization
+
+defining specific privileges-->policies---> principals
+
+Policies:
+Effect---> Service----> Resource.
+
+Policies contain permissions defining:
+Effect, Service , Resource[ARN]
+ARN: action, Condition
+Associating policies with principals:
+1. USER POLICY
+2. MANAGED POLICIES
+
+if u wanna assume permission to set of users we use groups IAM group: Group policy, Managed policies.
+Final way an actor can be associated with policy is by roles:
+1. the actors can be authenticated IAM user, process authenticated by a trusted service permises LDAP directory.
+
+OTHER KEY FEATURES:
+1. MFA
+2. Rotating keys
+3. Resolving multiple permissions
