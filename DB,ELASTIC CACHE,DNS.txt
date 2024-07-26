@@ -1,0 +1,92 @@
+DATABASES AND AWS:
+Database Primer:
+many features and common configurations settings are exposed and manangediwth DB parameter groups and DB option groups,\reboot is required
+
+Amazon Arora instances:
+1.primary instance
+2.amazon arora replica
+
+storage options: magnetic, general purpose ssd, provisioned ssd
+Backup and recovery:
+1. automated backups and manual snapshots
+Each org will have RTO and Rpo
+
+to maintain consisitent fast performance levels we store data in the SSD disk drives. DynamoDB provides a web service API that accepst requests in JSON format
+most developers use SDK;s to interact with their items and attributes, when you create a table or secondary index you must specify names and data types of each primary key attribute(partition key and sort key)
+1. scalar datat type
+2. set data type
+3. document
+
+For a local secondary index, item updates wil consume write capapcity units from main table while global secondary indexes maintain their own provisioned throughput settings seprate from table
+
+
+
+SQS,SQF,SNS:
+SQS is basically a buffer between the application components that receive data and those components that process the data in your system. Amazon SQS ensures delivery of each message at least once and supports multiple readers and writers interacting with same queue.
+
+
+Delay Queues and Visibility Timeouts:
+Amazon SQS supports of maximum 12 hours max visibility max timeout.
+
+
+Amaazon SQS uses three identifiers that you need to be familiar with: queue URL's, message ID's and receipt handles.
+long polling --waittimemessages
+long polling drastically reduces the amount of load on your clinet
+dead letter queues: it is to sideline the unsuccessfully processed messages
+
+--longest configurable message retention period for SQS is 14 days
+-- default message retention period for SQS is 4 days
+the main difference between Amazon SQS policies and IAM policies is that amamzon SQS policy enables you to grant a different AWS to your amazon SQS queues but an IAM policy doe snot
+
+STEPS INVOLVED IN DNS RESOLUTION:
+we have 13 root servers in operations,
+resolving name servers== requesters
+
+Record Types;
+--start of authority record--it is mandatory in all zone files and it identifies the base DNS infor about the domain
+-- A and AAAA
+--CNAME
+--Mail Exchange(MX)
+--Name Server
+--PTR
+-- SEnder policy framework
+--TXT
+-- Service (SRV)
+
+Amazon route S3 performs:
+1. Domain registration
+2. DNS service
+3. Health checking
+
+types of routing policies:
+1. simple
+2. weighted
+3.latency
+4.failover
+
+UDP is primarily used by DNS to serve requests.
+Amazon53 main functions: domain registration,DNS service,health checking.
+Amazon Elasticcache is a web service that simplifies the setup and management of distributed in-memory caching ebvironments.
+With amazon elasticcache, you can choose from a Memcached or redis protocol-compliant cache engine and quickly launch a cluster within minutes. as amazon elastic cache is protocol-compliant with both of these engines you only need to change the endpoint in your configuration files. The most common pattern is the cache-aside pattern where it checks the cache first if not then query the database and serialize and write the query the results to the fcache.
+redis engine makes it easy for elastic cache to set up the read replicas and fail over fromm the primary to a replica in the evevnt of a problem.
+Data access patterns : retrieving a flat key from in-memory cache will always be faster than most optimized db query.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
