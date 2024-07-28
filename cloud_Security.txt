@@ -1,0 +1,10 @@
+Other services: storage and content delivery, security, analytics and devops.
+USECASES FOR CLOUD SECURITY:
+1. scalalble symmetric key xdistribution
+2. government validated cryptography
+AWS cloud trail provides visibility into user activity by recording API calls made on your account.
+AWS cloud trail use cases:
+1. external compliance audits
+2. unauthorized access to your aws account
+Amazon kinesis use cases:
+data ingestion, real-time processing of massive datat streasm
